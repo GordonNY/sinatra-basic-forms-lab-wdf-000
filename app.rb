@@ -10,7 +10,7 @@ class App < Sinatra::Base
   end
 
   post '/new' do
-    @name = "Puppy Name:\n#{params[:name]}"
+    @name =  params[:name]#"Puppy Name:\n#{params[:name]}"
     @breed = "Puppy Breed:\n#{params[:breed]}"
     @age = "Puppy Age:\n#{params[:age]} months"
     erb :display_puppy
